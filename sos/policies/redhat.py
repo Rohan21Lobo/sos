@@ -197,7 +197,9 @@ RH_CFME_DESC = "Red Hat CloudForms"
 
 RH_SATELLITE = "satellite"
 RH_SATELLITE_DESC = "Red Hat Satellite"
-SAT_OPTS = SoSOptions(verify=True, plugopts=['apache.log=on'])
+SAT_OPTS = SoSOptions(verify=True, plugopts=['apache.log=on', 'qpid.port=5671',
+                      'qpid.ssl-certificate=/etc/pki/katello/qpid_router_client.crt',
+                      'qpid.ssl-key=/etc/pki/katello/qpid_router_client.key'])
 
 CB = "cantboot"
 CB_DESC = "For use when normal system startup fails"
